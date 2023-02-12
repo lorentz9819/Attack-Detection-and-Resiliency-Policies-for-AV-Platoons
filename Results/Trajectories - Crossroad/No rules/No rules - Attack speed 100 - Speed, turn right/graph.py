@@ -1,0 +1,35 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+var = pd.read_excel("traj.xlsx")
+print(var)
+
+# To plot the trajectory
+"""xl = list(var['XLEAD'])
+yl = list(var['YLEAD'])
+
+x1 = list(var['XF1'])
+y1 = list(var['YF1'])
+
+x2 = list(var['XF2'])
+y2 = list(var['YF2'])
+
+plt.plot(xl,yl,'g',label='TrajLead')
+plt.plot(x1,y1,'r',label='TrajFol1')
+plt.plot(x2,y2,'b',label='TrajFol2')"""
+
+#To plot the speed
+slead = list(var['SLEAD'])
+
+sfol1 = list(var['SFOL1'])
+
+sfol2 = list(var['SFOL2'])
+
+plt.xlabel('# samples')
+plt.ylabel('speed (MPH)')
+
+plt.plot(range(len(slead)), slead, linestyle='solid', color='g', label = 'Leader')
+plt.plot(range(len(sfol1)), sfol1, linestyle='dashed', color='r', label = 'Follower1')
+plt.plot(range(len(sfol2)), sfol2, linestyle='dotted', color='b', label = 'Follower2')
+
+plt.legend()
+plt.show()
