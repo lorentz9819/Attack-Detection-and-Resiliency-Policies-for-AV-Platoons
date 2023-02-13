@@ -1,3 +1,5 @@
+RESULTS
+
 Here, we analyze the collected data, and plot some comparation graphs.
 We retrieve all the data in the .xlsx files from the simulations. We started the simulation scenario, then, for each tick of CARLA, we collect different tuples of data:
 -X and Y coordinates of leader's vehicle
