@@ -344,7 +344,7 @@ class Follower(PlatoonMember):
             print("Wrong turn")
             print("Gyroscope = ", self.gyroscope[-1])
             print("gyro = ", gyro)
-            yaw = lyaw
+            lyaw = yaw
 
         return s
 
